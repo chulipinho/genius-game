@@ -22,26 +22,30 @@ body {
     height: 700px;
 }
 
-.blue {
+#blue {
     background-color: rgb(68, 68, 177);
     grid-area: 'blue';
     border-bottom-left-radius: 100%;
 }
 
-.green {
+#green {
     background-color: green;
     grid-area: 'green';
     border-bottom-right-radius: 100%;
 }
 
-.red {
+#red {
     background-color: red;
     border-top-right-radius: 100%;
     grid-area: 'red';
 }
 
-.yellow {
+#yellow {
     background-color: yellow;
     border-top-left-radius: 100%;
     grid-area: 'yellow';
+}
+
+.selected {
+    opacity: .3;
 }
