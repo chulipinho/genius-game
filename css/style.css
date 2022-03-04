@@ -13,11 +13,35 @@ body {
 
 .genius {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-areas: 'yellow red' 'blue green';
     gap: 10px;
     border: 1px solid white;
     background-color: white;
     border-radius: 100%;
     width: 700px;
     height: 700px;
+}
+
+.blue {
+    background-color: rgb(68, 68, 177);
+    grid-area: 'blue';
+    border-bottom-left-radius: 100%;
+}
+
+.green {
+    background-color: green;
+    grid-area: 'green';
+    border-bottom-right-radius: 100%;
+}
+
+.red {
+    background-color: red;
+    border-top-right-radius: 100%;
+    grid-area: 'red';
+}
+
+.yellow {
+    background-color: yellow;
+    border-top-left-radius: 100%;
+    grid-area: 'yellow';
 }
