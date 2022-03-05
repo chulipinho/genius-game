@@ -11,8 +11,6 @@ const runApp = () => {
 
     const colors = [red, green, yellow, blue];
 
-    alert('Welcome to Genius\nPress OK to begin.');
-
     const click = (colorIndex) => {
         clickedOrder.push(colorIndex);
         highlightColor(colorIndex);
@@ -57,14 +55,22 @@ const runApp = () => {
     const processUserInput = () => {
         if (clickedOrder[clickedOrder.length - 1] != colorQueue[clickedOrder.length - 1]) {
             gameOver();
-        }else if (clickedOrder.length === colorQueue.length) runLevel();
+            return;
+        }
+        if (clickedOrder.length === colorQueue.length) runLevel();
+
+        score++;
     }
 
     const gameOver = () => {
-        alert('perdeu');
+        alert(`Game over!\nYour score was: ${score}\nPress OK to play again`);
         colorQueue = [];
+        score = 0;
         runLevel();
     }
+
+    alert('Welcome to Genius\nPress OK to begin.');
+    runLevel();
 }
 
 runApp();
